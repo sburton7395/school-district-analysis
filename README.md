@@ -7,24 +7,31 @@ For Module 4, Pandas - a Python library created for data analysis and manipulati
 ## Results
 - Preparing and Cleaning the Data
     - All rows with null values were dropped, as were all duplicated rows.
+
 ![Null values in the dataset](/Resources/sum_null.png)
 ![Number of duplicated rows](/Resources/sum_duplicated.png)
     - Because the original dataset's [grade] column set each grade as 9th, 10th, 11th, or 12th, the "th" was dropped from each cell in the column, and the column's data type was changed from object to integer to allow for easier data manipulation.
+
 ![Original data types](/Resources/dtypes_original.png)
 ![Modified data types](/Resources/dtypes_modified.png)
 - Summarizing the Data
     - Using the Pandas [describe] function, the mean, standard deviation, minimum, maximum, and quartiles were calculated for the [student_id], [grade], [reading_score], [math_score], and [school_budget] columns.
+
 ![Summary statistics](/Resources/describe.png)
 - Drilling Down into the Data - Reading and Math Scores
     - Using the [loc] and [iloc] functions, the data was manipulated to show subsets of the data - such as the summary statistics(using the [describe] function) of ninth graders in the district and viewing the reading scores of one specific school.
+
 ![Ninth grade summary statistics](/Resources/describe_grade9.png)
 ![Dixon High School's reading scores](/Resources/dixon_reading.png)
 - Comparing the Data - Charter vs. Public Schools
     - Using the Pandas [groupby] function, the average school budget for all charter schools and public schools in the district were calculated.
+
 ![Average budget per school type](/Resources/school_type_budget.png)
     - Using [groupby], [count], and [sort_values], the data was grouped to count the total number of students per school, and sorted in descending order.
+
 ![Student count per school](/Resources/student_count.png)
     - Using [groupby] and [mean], schools in the district were sorted into charter versus public and further separated by grade, to show the average math score of each grade for charter and public schools.
+
 ![Charter and public math scores by grade](/Resources/school_type_grade_math_score.png)
 
 ## Summary
